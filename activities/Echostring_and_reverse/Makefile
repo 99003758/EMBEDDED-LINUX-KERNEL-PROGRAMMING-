@@ -1,2 +1,7 @@
+obj-m += hello1.o
 all:
-	arm-linux-gnueabi-gcc hello1.c -o reverse
+    make -C /home/user/workspace/packages/linux-4.14.227 M=$(PWD) modules ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+clean:
+    make -C /home/user/workspace/packages/linux-4.14.227 M=$(PWD) clean ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+build:
+    arm-linux-gnueabi-gcc my_sys.c -o lio
