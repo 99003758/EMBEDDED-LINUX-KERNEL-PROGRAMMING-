@@ -1,7 +1,7 @@
 #include <linux/kernel.h>
 #include <linux/syscalls.h>
 #include <linux/uaccess.h>
-SYSCALL_DEFINE2(mytestthree, const char __user *,ch,char __user *,gett)
+SYSCALL_DEFINE2(mytestthree, const char *,ch,char*,gett)
 {
    char buf[50],rev[50];
    int n,i,j;
